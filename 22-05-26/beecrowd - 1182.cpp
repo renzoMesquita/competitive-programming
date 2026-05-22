@@ -1,0 +1,34 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+ 
+int main() {
+ 
+    int col=12, lin = 12, i, j, c;
+    float soma, media, mat[lin][col];
+    char t;
+    
+    cin >> c;
+    cin >> t;
+    
+    for(i=0; i<lin; i++){
+        for(j=0; j<col; j++){
+            cin >> mat[i][j];
+        }
+    }
+    
+    for(i=0; i<lin; i++){
+        soma += mat[i][c];
+    }
+    
+    media = soma / 12;
+    
+    if(t == 'S'){
+        cout << fixed << setprecision(1) << soma << '\n';
+    }
+    else if(t == 'M'){
+        cout << fixed << setprecision(1) << media << '\n';
+    }
+
+    return 0;
+}
